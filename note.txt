@@ -1,0 +1,39 @@
+Enter the working directory
+>>cd working folder
+
+create virtual enviroment
+>>python -m venv name_of_enviroment
+
+activate your virtual enviroment
+>>.\name_of_enviroment\scripts\activate
+
+Install django to the virtual enviroment
+>>pip3 Install django
+
+start your project
+>>django-admin startproject project_name
+
+create you first app
+django-admin startapp app_name
+
+run the migrate function
+>>python manage.py migrate
+
+run the server and see if all is installed successfully
+>>python manage.py runserver
+
+Add the beloc code to setting.py file for static stuffs
+'''
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+
+# Media Files
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+'''
+
+Then collectstatic
+>>python manage.py collectstatic
+
+Then go edit your project url, views, App-url, to test installed
+
